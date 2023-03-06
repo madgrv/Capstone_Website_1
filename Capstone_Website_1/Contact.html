@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--Link to custom font-->
+    <link href="/fonts/studio-feixen-sans-variable.woff2" rel="preload" as="font" crossorigin="" type="font/woff2">
+    <link rel="stylesheet" href="./PortfolioStyle.css">
+    <title>MattG Portfolio</title>
+</head>
+<body>
+    <div id="topBar">
+        <div id="menuLayer">
+            <h1 id="myName" class="shadow">matteogalesi@</h1>
+            <nav class="menuBar">
+                <ul id="menuUL">
+                    <li id="menuLi"><a href="./Home.html">HomE</a></li>
+                    <li id="menuLi"><a href="./About.html">AbouT</a></li>
+                    <li id="menuLi"><a href="./Work.html">WorK</a></li>
+                    <li id="menuLi"><a href="./Photos.html">Photos</a></li>
+                    <li id="menuLi"><a href="./Contact.html">ContacT</a></li>
+                </ul>
+            </nav>
+    </div>
+    </div>
+    <main class="main" style="margin-top: 4vh;">
+        <div>
+            <p>If you would like to get in touch with me, you can send me an email at <a href="mailto:matteogalesi@icloud.com">example@email.com</a>.</p>
+            <br>
+            <p>Alternatively you can fill the form below:</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              
+                <label for="email">Email:</label>
+                <input type="email" id="emailForm" name="email" required>
+              
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+              
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+              
+                <button type="submit" class="button center" onclick="sendEmail()">Send</button>
+            </form>
+            <br>  
+            <br>  
+            <p style="text-align: right;">You can find me on <a href="https://www.linkedin.com/in/matteo-galesi-7a9b99262/" target="_blank">LinkedIn</a> And you can also follow me on <a href="https://www.instagram.com/teogalesi/" target="_blank">Instagram</a> for updates on my latest music projects.</p>
+            <h2 style="margin-top: 3vh;">Subscribe to My Newsletter</h2>
+            <p>For all other updates</p>
+            <form action="#">
+                <br>
+                <label for="email">Your email:</label>
+                <input type="email" id="email" name="email">
+                <br>
+                <br>
+                <label>What type of content would you like to receive?</label>
+                <br>
+                <br>
+                <input type="radio" id="starters" name="category" value="starters">
+                <label for="Coding">Coding projects</label>
+                <br>
+                <input type="radio" id="main courses" name="category" value="main courses">
+                <label for="Music">Music projects</label>
+                <br>
+                <input type="radio" id="desserts" name="category" value="desserts">
+                <label for="Art">Art projects</label>
+                <br>
+                <input type="radio" id="desserts" name="category" value="desserts">
+                <label for="Photography">Photography</label>
+                <br>
+                <input type="radio" id="desserts" name="category" value="desserts">
+                <label for="Live">Live events</label>
+                <br>
+                <input type="radio" id="desserts" name="category" value="desserts">
+                <label for="All">All of them :)</label>
+                <br>
+                <br>
+                <button class="button">Subscribe</button>
+            </form>
+    </div>
+    </div>
+        
+        </main>
+        <script src='./Scripts/PortfolioScript.js'></script>
+        <!--Placing a link to the script at the end to make sure the whole page is loaded befor the script-->
+</body>
+</html>

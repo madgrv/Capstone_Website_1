@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--Link to custom font-->
+    <link href="/fonts/studio-feixen-sans-variable.woff2" rel="preload" as="font" crossorigin="" type="font/woff2">
+    <link rel="stylesheet" href="./PortfolioStyle.css">
+    <title>MattG Portfolio</title>
+</head>
+<!--I took time to explore for this project as I wanted to lay the foundation for something functional that I can later showcase. I wanted to understand and experiment further
+with various elemnts, flex grid and responsiveness. It is not perfect, many things aren't as they should and i will need more time and practice still to understand many concepts, 
+in particular flex grid, alignments and why certain elements seem to interfere and break some others. I have to submit as it is now as it fulfills the current task requirements, 
+but I hope the features that are beyond the task and are still to be addressed won't reflect negatively. It's time to move on for now.-->
+<body>
+    <div id="topBar">
+        <div id="menuLayer">
+            <h1 id="myName" class="shadow">.matteoGalesi()</h1>
+            <nav class="menuBar">
+                <ul id="menuUL">
+                    <li id="menuLi"><a href="./Home.html">HomE</a></li>
+                    <li id="menuLi"><a href="./About.html">AbouT</a></li>
+                    <li id="menuLi"><a href="./Work.html">WorK</a></li>
+                    <li id="menuLi"><a href="./Photos.html">Photos</a></li>
+                    <li id="menuLi"><a href="./Contact.html">ContacT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="flexContainer">
+        <div class="flexItem">
+            <div id="temperatureJS">
+                <div class="box">
+                    <h2 class="shadow" style="margin-bottom:2vw;">Temperature Converter</h2>
+                    <p class="tab">Here's a program created in JavaScript to convert the temperature in different scales.<br><br>
+                    It asks the user for their initial temperature scale and value and then requests the target scale before executing.</p>
+                    <p class="smallPrint">(The task didn't require for input error handling, 
+                        I have implemented this as an extra in order to create a fully functioning program).</p>
+                    <br>
+                    <button class="button center"><a id="tempConvert">Open converter</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="flexItem">
+            <div class="box">
+                <h2 class="shadow" style="margin-bottom:2vw;">Cat Generator</h2>
+                <div id="catImg">
+                    <!--https://cdn2.thecatapi.com/images/MTU1MTU5MA.gif
+                    https://cdn2.thecatapi.com/images/4h4.gif
+                    https://cdn2.thecatapi.com/images/6rb.gif-->
+                    <img class="imgFrame" id="catIt" src="https://cdn2.thecatapi.com/images/4h4.gif" alt="temp img">
+                </div>
+                <p>A function to display a cat gif from a free API and change image by clicking on button</p>
+                <p class="smallPrint">Source: https://api.thecatapi.com</p>
+                <br>
+                <button class="button center" onclick="getCat()"><a id="catButton">Change Cat</a></button>
+            </div>
+        </div>
+        <div class="flexItem">
+            <div class="box">
+                <h2 class="shadow" style="margin-bottom:2vw;">Monte Bianco</h2>
+                <div>
+                    <img src="./imgs/MonteBianco.JPG" alt="Italian Alps" class="imgFrame">
+                </div>
+                <p>A picture of the Italian Mont Blanc seen from La Thuile, Val D'aosta</p>
+                <br>
+            </div>
+        </div>
+        <div class="flexItem">
+            <div class="box">
+                <h2 class="shadow" style="margin-bottom:2vw;">Gran Paradiso</h2>
+                <div>
+                    <img src="./imgs/GranParadiso.jpg" alt="Italian Alps" class="imgFrame">
+                </div>
+                <p>Late afternoon sun through the clouds, Parco Nazionale Gran Paradiso</p>
+                <br>
+                <button class="button center"><a href="https://www.instagram.com/ts_shotonaphone/" target="_blank">See more photos</a></button>
+            </div>
+        </div>
+       
+        <div class="flexItem">
+            <div class="box">
+                <h2 class="shadow" style="margin-bottom:2vw;">Orchestral programming</h2>
+                <!-- <img src="./imgs/LaMer.png" alt="LaMer.png" class="imgFrame"> -->
+                <!--I'm using the embedded YouTube video instead of an image here as it is more practical-->
+                <iframe style="border-radius: 8px;" src="https://www.youtube.com/embed/camoU5QUT3Q" frameborder="0" allowfullscreen></iframe>
+                <p>
+                    The completed orchestral mockup of the 1st moment of Debussy's magnificent La Mer.<br>
+                    Part of my fundraising campaign to support Mind Charity, achieveing one of the top 
+                    <a href="https://www.justgiving.com/fundraising/la-mer" target="_blank">fundraising campaigns</a> in 2021<br><br>
+                    </p>
+                <button class="button center"><a href="https://www.youtube.com/@matteogalesi7761/videos" target="_blank">Go to channel</a></button>
+            </div>
+        </div>
+   
+        <span id="myButton"></span>
+    </main>
+    <footer class="box center" style="margin: 2vw;">
+        <div style="text-align: center;" >
+            <a style="font-size: 20px;" href="https://www.matteogalesi.com" target="_blank">Music Productions Website</a>
+        </div>
+    </footer>
+    <script src='./Scripts/PortfolioScript.js'></script>
+    <script src='./Scripts/temperature.js'></script>
+    <!--Placing a link to the script at the end to make sure the whole page is loaded befor the script-->
+</body>
+</html>

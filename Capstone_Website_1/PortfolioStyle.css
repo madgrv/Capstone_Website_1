@@ -1,0 +1,461 @@
+/* TASK 29 - CSS */
+
+/* Trying to create a playful page */
+
+/* I took time to explore for this project as I wanted to lay the foundation for something functional that I can later showcase. I wanted to understand and experiment further
+with various elemnts, flex grid and responsiveness. It is not perfect, many things aren't as they should and i will need more time and practice still to understand many concepts, 
+in particular flex grid, alignments and why certain elements seem to interfere and break some others. I have to submit as it is now as it fulfills the current task requirements, 
+but I hope the features that are beyond the task and are still to be addressed won't reflect negatively. It's time to move on for now. 
+
+TESTED IN SAFARI, SOME FEATURE MAY BE MISSING IN CHROME SUCH AS THE ANIMATED BACKGROUND
+
+*/
+
+@font-face { /* Creating custom font */
+    font-family: "maxi";
+    src: url(./ABC_Maxi_Round-Mono_Variable/ABCMaxiRoundMonoVariable-Trial.woff) format("woff"), url(./ABC_Maxi_Round-Mono_Variable/ABCMaxiRoundMonoVariable-Trial.ttf) format("truetype");
+    font-weight: 400;
+    font-style:normal
+}
+
+@media (max-width: 800px) {
+    .flexItem {
+      width: 100%;
+    }
+}
+
+* {
+    font-family: "maxi";
+    color: #F09894;
+    /* Removing all of the browser default spacing around elements: */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+   background-color: rgb(46, 74, 130);
+}
+
+/*Removing link underlines and adding some transition effects*/
+a:link {
+    color: rgb(249, 215, 215);
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    text-shadow: 0 4px 6px rgb(0, 0, 0);
+
+}
+
+a:visited {
+    color: rgb(249, 215, 215);
+}
+
+a:hover {
+    color: rgb(248, 158, 158);
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.652);
+}
+
+a:active {
+    color: white;
+    text-shadow: 0 2px 3px rgb(0, 0, 0);
+
+}
+
+h2 {
+    margin: 4%;
+}
+
+table {
+    background-color: rgb(24, 52, 107);
+    margin: auto;
+    width: 80%;
+    border: solid 2px #f49d99;
+    border-collapse: collapse;
+    overflow: auto; /*adds scroll bar for smaller screens*/
+}
+
+th, td {
+    border: solid 2px #f49d99;
+    padding: 1vw;
+}
+
+th {
+    height: 5vh;
+}
+
+input, textarea {
+    margin: 1%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  display: block;
+  width: 100%;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+
+  line-height: 1.4em;
+}
+
+.hfeed {
+    margin: 2%;
+} 
+
+.main {
+    max-width: 85vw;
+    margin: auto;
+    width: 100%;
+    padding: 4vh;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.align_left {
+    text-align: left;
+}
+
+.imgStack {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+}
+
+/* Paragraph style */
+.tab { margin-left: 3%; } /* Indentation style */
+
+/* Table style */
+.tableDiv {
+    align-content: center;
+    padding: 2%;
+    margin: 4vw;
+}
+
+.center {
+    margin: auto;
+    /* width: 100%;
+    text-align: center; */
+}
+
+.liked:hover {
+    cursor: pointer;
+}
+
+.shadow {
+    text-shadow: 0.2vw  0.4vw 1vw #0000007f;
+}
+
+/*Source: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-background [accessed 10/Feb/23]*/
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    align-content: flex-start;
+    gap: 1px;
+    /* max-width: 70%; */
+    justify-content: space-around;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.flexItem {
+    display: flex;
+    justify-content: space-between;
+    width: calc(33.33% - 2px);
+    margin: 10px;
+    size:100%;
+}
+
+.parContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    width: 90%;
+
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+
+    border-radius: 8px;
+    /* size: 100%; */
+    margin: 1%;
+    padding: 1.3vw;
+    background-color: #b3b3b328;
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* WORK PAGE */
+
+#temperatureJS {
+    width: 40vw;
+    height: auto;
+}
+
+.smallPrint {
+    margin: 1.5vw;
+    font-size: 11px;
+    color: #ef817b;
+}
+
+.imgFrame {
+    margin: 4px;
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageContainer {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+}
+
+/*CONTACT PAGE*/
+.button {
+    display: flex;
+    margin: 3%;
+    padding: 4% 4%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ee9582;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    /* border: solid 4px #ffffff95; */
+    box-shadow: 2px 7px 5px 2px #00000063;
+    text-shadow: 2px 3px 2px #0000009f;
+    border-radius: 8px;
+    background-color: #b3b3b328;
+    -webkit-backdrop-filter: blur(4px);
+    transition: 0.12s;
+}
+
+.button:hover {
+    color:  #e7c4bc;
+}
+
+.button:active {
+    text-shadow: 2px 1px 2px #0000009f;
+    box-shadow: 2px 3px 1px 1px #0000008e;
+}
+
+.unliked {   
+    /* content:"\2661"; */
+    color: white;
+    cursor: pointer;
+    margin: 2%;
+}
+
+.liked {
+    /* content: "\2665"; */
+    color: rgb(252, 51, 125);
+    cursor: pointer;
+    margin: 2%;
+
+}
+
+/* Styling for opening an image in a lightbox*/
+/* Style for the modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    /* z-index brings it to the forefront */
+}
+
+/* Style for the modal content */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Style for the image inside the modal content */
+.modal-content img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+/* end of floating image styling */
+
+#myName {
+    text-align: center;
+    font-size: 8.5vw;
+    margin: auto;
+    padding: 5% 0 0% 0;
+    width: 100%;
+}
+
+#menuLayer {
+    /* background-color: #f0999400;
+    -webkit-backdrop-filter: blur(5px); */ 
+    /*Left these top blurring effwect in there for future manipulation*/
+    box-shadow: inset 0 -4.3vw 3vw 0vh rgb(46, 74, 130);
+}
+
+#topBar {
+    background-image: url("./imgs/muñañyo.full.H.264-Copyrighted.mp4");
+    margin: 0 0 0 0;
+    padding: 0px;
+    height: 100%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* transform: skewY(8deg); */ 
+    /*I've left the skew commented out as I want to pick it up and explore it later on */
+}
+
+/*Ordering the navigation menu horizontally*/
+#menuUL {
+    font-size: larger;
+    font-weight:900;
+    font-size: 4vw;
+    transition: 0.1s;
+    text-align: right;
+    padding: 6% 6% 0% ;
+}
+
+#menuLi {
+    /* color: white; */
+    display: inline-block;
+    position: relative;
+    margin: 0px 4px 0px 8px;
+}
+
+#subTitle {
+    text-align: end;
+    margin: 4vh;
+    padding: 4%;
+    font-size: 4vw;
+}
+
+#assingParagraph {
+    padding: 2%;
+    margin: 4vw;
+    background-color: rgb(24, 52, 107);
+    
+}
+
+#tick {
+    align-items: right;
+    color: black;
+}
+
+/*ABOUT PAGE*/
+#photo {
+    position: relative;
+    border: none;
+    border-radius: 3%;
+    height: 18vw;
+    padding: 0%;
+    width: auto;
+    float: left;
+    display: block;
+    margin: 2vh 2vw auto;
+    box-shadow: 0.2vw  0.4vw 1vw #0000007f;
+}
+
+#description {
+    margin-left: 24vw;
+    margin-top: 10vh;
+}
+
+#quotes{
+    text-align: center;
+    font-size: 12px;
+    max-width: 80vw;
+    margin-top: 13vh;
+
+}
+
+#famousQuotes {
+    margin-top: 1vh;
+    font-size: 19px;
+    padding: 2%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(24, 52, 107);
+    box-shadow: inset 0 -10vw 5vw 0vh rgb(46, 74, 130);
+}
+
+#myButton {
+    color: rgb(249, 215, 215);
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 2px 3px 2px #0000009f;
+
+}
+
+#myList {
+    text-align: left;
+    max-width: 36vw;
+}
+
+#savedList {    
+    width: auto;
+    margin: 1%;
+    margin-top: 3%;
+    padding: 4%;
+}
+
+/*
+Sources:
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew
+
+https://www.w3schools.com/howto/howto_css_rounded_images.asp
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY
+
+https://www.w3schools.com/css/css_table_size.asp
+
+https://stackoverflow.com/questions/6703228/how-to-force-a-list-to-be-vertical-using-html-css
+
+https://validator.w3.org/#validate_by_input
+
+
+
+
+*/

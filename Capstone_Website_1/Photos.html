@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--Link to custom font-->
+    <link href="/fonts/studio-feixen-sans-variable.woff2" rel="preload" as="font" crossorigin="" type="font/woff2">
+    <link rel="stylesheet" href="./PortfolioStyle.css">
+    <title>MattG Portfolio</title>
+</head>
+<!--I took time to explore for this project as I wanted to lay the foundation for something functional that I can later showcase. I wanted to understand and experiment further
+with various elemnts, flex grid and responsiveness. It is not perfect, many things aren't as they should and i will need more time and practice still to understand many concepts, 
+in particular flex grid, alignments and why certain elements seem to interfere and break some others. I have to submit as it is now as it fulfills the current task requirements, 
+but I hope the features that are beyond the task and are still to be addressed won't reflect negatively. It's time to move on for now.-->
+<body onload="imgOnLoad(photosArray)">
+    <div id="topBar">
+        <div id="menuLayer">
+            <h1 id="myName" class="shadow">.dynamicPICS()</h1>
+            <nav class="menuBar">
+                <ul id="menuUL">
+                    <li id="menuLi"><a href="./Home.html">HomE</a></li>
+                    <li id="menuLi"><a href="./About.html">AbouT</a></li>
+                    <li id="menuLi"><a href="./Work.html">WorK</a></li>
+                    <li id="menuLi"><a href="./Photos.html">Photos</a></li>
+                    <li id="menuLi"><a href="./Contact.html">ContacT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="flexContainer">
+        <div class="parContainer"></div>
+        <div id="savedList"></div>
+    </main>
+    <div class="box center">
+        <h1 class="center">Comment Section</h1>
+        <textarea type="text" id="userComment" placeholder="Enter a comment"></textarea>
+        <input type="text" id="userName" placeholder="Your name">
+        <button id="addComment" class="button" onclick="addComment()">Add comment</button>
+        <div id="commentSection" class="center">
+            <!-- <ol id="posts-list" class="hfeed">
+                <li><article id="comment_"></article></li>
+            </ol> -->
+        </div>
+    </div>
+    <footer class="box" style="margin: 3%;">
+        <div style="text-align: center;" >
+            <a style="font-size: 20px;" href="https://www.matteogalesi.com" target="_blank">Music Productions Website</a>
+        </div>
+    </footer>
+    <script src='./Scripts/PortfolioScript.js'></script>
+    <!--Placing a link to the script at the end to make sure the whole page is loaded befor the script-->
+</body>
+</html>

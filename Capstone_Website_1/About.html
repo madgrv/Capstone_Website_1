@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--Link to custom font-->
+    <link href="/fonts/studio-feixen-sans-variable.woff2" rel="preload" as="font" crossorigin="" type="font/woff2">
+    <link rel="stylesheet" href="./PortfolioStyle.css">
+    <title>MattG Portfolio</title>
+</head>
+<body>
+    <div id="topBar">
+        <div id="menuLayer">
+            <h1 id="myName" class="shadow">{matteo: Galesi}</h1>
+            <nav class="menuBar">
+                <ul id="menuUL">
+                    <li id="menuLi"><a href="./Home.html">HomE</a></li>
+                    <li id="menuLi"><a href="./About.html">AbouT</a></li>
+                    <li id="menuLi"><a href="./Work.html">WorK</a></li>
+                    <li id="menuLi"><a href="./Photos.html">Photos</a></li>
+                    <li id="menuLi"><a href="./Contact.html">ContacT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="main">
+        <div class="align_right">
+            <h1>Welcome to my simple website!</h1>
+            <h2>About me:</h2>
+            <div class="imgStack">
+                <div>
+                    <img src="./imgs/IMG_0104.jpg" alt="Avatar" id="photo" class="shadow">
+                </div>
+                <div id="techStack" style="float: left;">
+                    <div>
+                        <ul class="center" style="margin-top: 4vh;">
+                            <li id="myList;">TECH STACK:
+                                <ul style="text-align: left;">
+                                    <li>JavaScript</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Node.js</li>
+                                    <li>React</li>
+                                    <li>Python</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="align_left" id="description">
+                <h3 class="shadow">Description</h3>
+                <br>
+                <p>I am a web developer, composer, artist and hobbyist photographer.<br></br>
+                    Transitioning to a career in full stack web development.<br> 
+                    with a passion for coding and a background in music production, audio engineering, and visual arts.<br><br>
+
+                    Highly motivated developer with a strong desire to contribute to the team's success through hard work, attention to detail, 
+                    and creative thinking.<br> 
+                    With a clear understanding of software development principles and proficiency in programming languages such as JavaScript, 
+                    HTML, and CSS. <br><br>
+                    Currently enrolled in a university-certified bootcamp at HyperionDev and committed to learning and growing in the tech industry.</p>
+            </section>
+           
+        </div>
+        <div id="quotes">
+            <div class="smallPrint">This is an example of integration of an API fetch function from JavaScript:</div>
+            <div id="famousQuotes"> <!--Javascript link to API fetch function-->
+                <p id="motPhrase">"It isn't where you come from, it's where you're going that counts."</p>
+                <p id="phAuthor">"Ella Fitzgerald"</p>
+                <button id="myButton" class="button center" style="margin-top:2vw;" onclick="getPhrase()">
+                    <h3>Get a new phrase</h3>
+                </button> <!--Added an event listener by id in the js script for practice instead of a onclick element-->
+            </div>
+        </div>
+        
+
+    </main>
+    
+    <script src='./Scripts/PortfolioScript.js'></script>
+    <!--Placing a link to the script at the end to make sure the whole page is loaded befor the script-->
+</body>
+</html>
